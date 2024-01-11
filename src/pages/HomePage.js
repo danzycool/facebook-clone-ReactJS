@@ -3,12 +3,12 @@ import React from 'react';
 import Header from '../components/Header';
 import Sidebar from '../components/Sidebar';
 import Feed from '../components/Feed';
+import "../css/HomePage.css";
 
 const HomePage = () => {
     return (
         <div className='app'>
             <Header />
-
 
             <div className='app_body'>
 
@@ -16,9 +16,9 @@ const HomePage = () => {
 
                 <Feed />
 
+
                 {/** Widgets */}
             </div>
-
 
 
         </div>
