@@ -1,19 +1,18 @@
 import React from 'react';
 import "../css/StoryReel.css";
 import Story from './Story';
+import AddStory from './Story';
 
 const StoryReel = () => {
     return (
         <div className='storyReel'>
-            <Story
-                profileSrc={`${process.env.PUBLIC_URL}/rihanna.jpg`}
-                title="Rihanna"
-                image={`${process.env.PUBLIC_URL}/cosmos-1.jpg`}
+            <AddStory
+                image={`${process.env.PUBLIC_URL}/danzycool.jpg`}
             />
             <Story
-                profileSrc={`${process.env.PUBLIC_URL}/fox.jpeg`}
+                profileSrc={`${process.env.PUBLIC_URL}/rihanna.jpg`}
                 title="Jammie Fox"
-                image={`${process.env.PUBLIC_URL}/cosmos-2.jpg`}
+                image={`${process.env.PUBLIC_URL}/cosmos-1.jpg`}
             />
             <Story
                 profileSrc={`${process.env.PUBLIC_URL}/michael.jpeg`}

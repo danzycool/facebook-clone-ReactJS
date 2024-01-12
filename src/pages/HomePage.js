@@ -1,9 +1,10 @@
 import React from 'react';
 
-import Header from '../components/Header';
-import Sidebar from '../components/Sidebar';
-import Feed from '../components/Feed';
 import "../css/HomePage.css";
+import Header from '../components/Header';
+import Feed from '../components/Feed';
+import Sidebar from '../components/Sidebar';
+import Widget from '../components/Widgets';
 
 const HomePage = () => {
     return (
@@ -16,8 +17,8 @@ const HomePage = () => {
 
                 <Feed />
 
+                <Widget />
 
-                {/** Widgets */}
             </div>
 
 

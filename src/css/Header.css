@@ -29,6 +29,10 @@
     outline-width: 0;
 }
 
+.header_input > .MuiSvgIcon-root {
+    color: #65676B;
+}
+
 .header_left > img {
     height: 40px;
 }
@@ -50,8 +54,9 @@
 .header_option {
     display: flex;
     align-items: center;
-    padding: 0 30px;
+    padding: 0 40px;
     cursor: pointer;
+    margin: 0 8px;
 }
 
 .header_option:hover {
@@ -71,12 +76,59 @@
 .header_info {
     display: flex;
     align-items: center;
+    cursor: pointer;
+    position: relative;
+    margin-left: 5px;
+    border: 1.5px solid #E4E6EB;
+    border-radius: 50%;
 }
 
-.header_info > h4 {
-    margin-left: 10px;
+.header_info > span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    padding: 0.5px;
+    bottom: -2px;
+    right: -5px;
+    background-color: lightgray;
+    border: 2px solid whitesmoke;
+    border-radius: 50%;
+}
+
+.header_info > span > .MuiSvgIcon-root {
+    height: 15px;
+    width: 15px;
 }
 
 .header_right {
     display: flex;
+    cursor: pointer;
+    
+}
+
+.header_right > .icon:hover {
+    background-color: lightgray;
+    
+}
+
+.header_info:hover {
+    -webkit-filter: brightness(88%);
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+.header_right > .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    padding: 2px;
+    margin: 0 5px;
+    border-radius: 50%;
+    background-color: #E4E6EB;
 }
