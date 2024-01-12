@@ -24,14 +24,18 @@ const Widgets = () => {
             <div className='section'>
                 <span className='title'>Sponsored</span>
                 <div className='subSection'>
-                    <div className='graphic' style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/mongoAd.jpeg)` }}></div>
+                    <div className='graphic'>
+                        <img src='/mongoAd.jpeg' alt="ad" />
+                    </div>
                     <div className='content'>
                         <h4>Getting the most out of MongoDB</h4>
                         <p>mongodb.com</p>
                     </div>
                 </div>
                 <div className='subSection'>
-                    <div className='graphic' style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/jacket.jpeg)` }}></div>
+                    <div className='graphic'>
+                        <img src='/jacket.jpeg' alt="ad" />
+                    </div>
                     <div className='content'>
                         <h4>Today only $5.99</h4>
                         <p>xyzapparels.com</p>
@@ -40,9 +44,6 @@ const Widgets = () => {
             </div>
 
             <div className='section'>
-
-
-
                 <span className='title'>Your Pages and Profiles</span>
                 <div className='subSection'>
                     <div className='page'>
@@ -72,8 +73,18 @@ const Widgets = () => {
                 </div>
             </div>
 
-            <div className='subSection'>
+            <div className='section'>
                 <span className='title'>Birthdays</span>
+                <div className='subSection'>
+                    <div className='birthdays'>
+                        <div className='birth_image'>
+                            <img src="/birthday.png" alt='birthday_pix' />
+                        </div>
+                        <div className='birth_content'>
+                            <span>Keanu Reaves</span> and <span>6 others</span> have birthdays today.
+                        </div>
+                    </div>
+                </div>
             </div>
         </div >
     )

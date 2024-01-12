@@ -40,19 +40,29 @@
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
-    border-radius: 5px;
+}
+
+.graphic > img {
+    width: 100px;
+    height: auto;
+    border-radius: 10px;
 }
 
 .content {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    justify-content: center;
     padding: 10px;
-    color: #050505;
+    color: #67676B;
 }
 
-.content > p h4 {
-    text-align: left;
+.content > h4 {
+    color: #464647;
+}
+
+.content > p {
+    font-size: 13px;
 }
 
 .page {
@@ -84,3 +94,19 @@
 .page_icon > span {
     margin-left: 10px;
 }
+
+.birthdays{
+    display: flex;
+
+}
+
+.birth_content {
+    margin-left: 6px;
+}
+
+.birth_content > span {
+    font-size: 15px;
+    color: #333;
+    font-weight: 700;
+}
+
