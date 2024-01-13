@@ -3,13 +3,16 @@ import { Chat, EmojiFlags, ExpandMoreOutlined, People, Storefront, SupervisedUse
 
 import '../css/Sidebar.css';
 import SidebarRow from './SidebarRow';
+import { useStateValue } from '../StateProvider';
 
 const Sidebar = () => {
+    const [{ user }, dispatch] = useStateValue();
     return (
         <div className='sidebar'>
             <SidebarRow
-                src={`${process.env.PUBLIC_URL}/danzycool.jpg`}
-                title="Daniel Isah"
+                src={user.photoURL}
+                title={user.displayName}
+                left={12}
             />
             <SidebarRow Icon={People} title="Friends" />
             <SidebarRow Icon={SupervisedUserCircle} title="Groups" />

@@ -1,12 +1,24 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState, yuseEffect } from 'react';
 import { Avatar } from '@material-ui/core';
 import { InsertEmoticon, PhotoLibrary, Videocam } from '@material-ui/icons';
 
 import "../css/MessageSender.css";
+import { useStateValue } from '../StateProvider';
 
 const MessageSender = () => {
     const [input, setInput] = useState('');
     const [imageUrl, setImageUrl] = useState('');
+    const [{ user }, dispatch] = useStateValue();
+
+    const [firstname, setFirstname] = useState('');
+
+    useEffect(() => {
+        if (user) {
+            let firstname = user.displayName.split(' ')[0];
+            setFirstname(firstname);
+            console.log(firstname)
+        }
+    }, [user]);
 
     const handleSubmit = e => {
         e.preventDefault();
@@ -20,13 +32,13 @@ const MessageSender = () => {
     return (
         <div className='messageSender'>
             <div className='messageSender_top'>
-                <Avatar src={`${process.env.PUBLIC_URL}/danzycool.jpg`} />
+                <Avatar src={user.photoURL} />
                 <form>
                     <input
                         value={input}
                         onChange={e => setInput(e.target.value)}
                         className='messageSender_input'
-                        placeholder="what's on your mind?"
+                        placeholder={`what's on your mind, ${firstname}?`}
                     />
                     <input
                         value={imageUrl}

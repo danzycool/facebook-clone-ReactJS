@@ -1,12 +1,15 @@
 import React from 'react'
-import { Add, Dialpad, Menu, ExpandMore, Flag, Forum, Home, NotificationsActive, Search, StorefrontOutlined, SubscriptionsOutlined, SupervisedUserCircle } from '@material-ui/icons';
-import { Avatar, IconButton } from '@material-ui/core';
+import { Add, Dialpad, ExpandMore, Home, Search, StorefrontOutlined, SupervisedUserCircle } from '@material-ui/icons';
+import { Avatar } from '@material-ui/core';
 import { FaFacebookMessenger, FaBell } from "react-icons/fa";
 import { LuGamepad } from "react-icons/lu";
 
 import "../css/Header.css";
+import { useStateValue } from '../StateProvider';
 
 const Header = () => {
+    const [{ user }, dispatch] = useStateValue();
+
     return (
         <div className='header'>
             <div className='header_left'>
@@ -31,7 +34,7 @@ const Header = () => {
                     <SupervisedUserCircle fontSize='large' />
                 </div>
                 <div className='header_option'>
-                    <LuGamepad size={35} color='gray' />
+                    <LuGamepad size={35} className='gamepad' color='gray' />
                 </div>
             </div>
 
@@ -51,7 +54,7 @@ const Header = () => {
                 </div>
 
                 <div className='header_info'>
-                    <Avatar src={`${process.env.PUBLIC_URL}/danzycool.jpg`} />
+                    <Avatar src={user.photoURL} />
                     <span>
                         <ExpandMore />
                     </span>

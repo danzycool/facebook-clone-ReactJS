@@ -2,12 +2,15 @@ import React from 'react';
 import "../css/StoryReel.css";
 import Story from './Story';
 import AddStory from './Story';
+import { useStateValue } from '../StateProvider';
 
 const StoryReel = () => {
+    const [{ user }, dispatch] = useStateValue();
+
     return (
         <div className='storyReel'>
             <AddStory
-                image={`${process.env.PUBLIC_URL}/danzycool.jpg`}
+                image={user.photoURL}
             />
             <Story
                 profileSrc={`${process.env.PUBLIC_URL}/rihanna.jpg`}

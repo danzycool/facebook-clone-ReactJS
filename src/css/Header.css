@@ -51,6 +51,10 @@
     color: #2e81f4;
 }
 
+.header_option:hover > .gamepad {
+    clip-path: #2e81f4;
+}
+
 .header_option {
     display: flex;
     align-items: center;

@@ -10,8 +10,8 @@ const Widgets = () => {
     return (
         <div className='widgets'>
             {/* <iframe
-                title='programming_widget'
-                src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FCleverProgrammerr%2F&tabs=timeline&width=340&height=1500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
+                title='widget'
+                src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2F...."
                 width={340}
                 height='100%'
                 style={{ border: "none", overflow: "hidden" }}
@@ -86,6 +86,53 @@ const Widgets = () => {
                     </div>
                 </div>
             </div>
+
+            <div className='section'>
+                <span className='title'>Contacts</span>
+
+                <div className='subSection'>
+                    <div className='page'>
+                        <Avatar src={`${process.env.PUBLIC_URL}/keanu.jpg`} />
+                        <span>Keanu Reaves</span>
+                    </div>
+                </div>
+                <div className='subSection'>
+                    <div className='page'>
+                        <Avatar src={`${process.env.PUBLIC_URL}/samuel.jpg`} />
+                        <span>Samuel L. Jackson</span>
+                    </div>
+                </div>
+                <div className='subSection'>
+                    <div className='page'>
+                        <Avatar src={`${process.env.PUBLIC_URL}/ciara.jpg`} />
+                        <span>Ciara Princess Harris</span>
+                    </div>
+                </div>
+                <div className='subSection'>
+                    <div className='page'>
+                        <Avatar src={`${process.env.PUBLIC_URL}/scofield.jpg`} />
+                        <span>Michael Scofield</span>
+                    </div>
+                </div>
+                <div className='subSection'>
+                    <div className='page'>
+                        <Avatar src={`${process.env.PUBLIC_URL}/beyonce.jpg`} />
+                        <span>Beyonce Knowles</span>
+                    </div>
+                </div>
+                <div className='subSection'>
+                    <div className='page'>
+                        <Avatar src={`${process.env.PUBLIC_URL}/rihanna.jpg`} />
+                        <span>Rihanna ASAP</span>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+
+
         </div >
     )
 }
