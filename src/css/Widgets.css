@@ -1,9 +1,9 @@
 .widgets {
+    flex: 0.33;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    width: 280px;
-    padding: 25px 15px;
+    padding: 25px 5px;
 }
 
 .section {
