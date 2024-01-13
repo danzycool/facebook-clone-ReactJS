@@ -6,8 +6,8 @@ import "../css/AddStory.css";
 const AddStory = ({ image }) => {
     return (
         <div className='addStory'>
-            <div style={{ backgroundImage: { image } }} className='addStory_top'>
-
+            <div className='addStory_top'>
+                <img src={image} alt="story" />
             </div >
             <div className='addStory_bottom'>
                 <div className='icon'>

@@ -14,7 +14,7 @@ const StoryReel = () => {
             />
             <Story
                 profileSrc={`${process.env.PUBLIC_URL}/rihanna.jpg`}
-                title="Jammie Fox"
+                title="Rihanna"
                 image={`${process.env.PUBLIC_URL}/cosmos-1.jpg`}
             />
             <Story
