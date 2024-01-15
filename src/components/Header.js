@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react';
 import { Add, Dialpad, ExpandMore, Home, Search, StorefrontOutlined, SupervisedUserCircle } from '@material-ui/icons';
 import { Avatar } from '@material-ui/core';
 import { FaFacebookMessenger, FaBell } from "react-icons/fa";
@@ -9,6 +9,10 @@ import { useStateValue } from '../StateProvider';
 
 const Header = () => {
     const [{ user }, dispatch] = useStateValue();
+
+    const [iconColor, setIconColor] = useState(true);
+
+    const changeColor = () => setIconColor(!iconColor);
 
     return (
         <div className='header'>
@@ -33,8 +37,15 @@ const Header = () => {
                 <div className='header_option'>
                     <SupervisedUserCircle fontSize='large' />
                 </div>
-                <div className='header_option'>
-                    <LuGamepad size={35} className='gamepad' color='gray' />
+                <div className='header_option'
+                    onMouseEnter={changeColor}
+                    onMouseLeave={changeColor}
+                >
+                    {iconColor ? (
+                        <LuGamepad size={35} color="gray" />
+                    ) : (
+                        <LuGamepad size={35} color="#2e81f4" />
+                    )}
                 </div>
             </div>
 
