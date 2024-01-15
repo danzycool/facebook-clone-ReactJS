@@ -6,14 +6,13 @@ import "../css/AddStory.css";
 const AddStory = ({ image }) => {
     return (
         <div className='addStory'>
-            <div className='addStory_top'>
-                <img src={image} alt="story" />
+            <div className='addStory_top' style={{ backgroundImage: `url(${image})` }}>
             </div >
             <div className='addStory_bottom'>
                 <div className='icon'>
                     <Add />
                 </div>
-                <h4>Create Story</h4>
+                <h5 style={{ margin: "0 auto", color: "#67676B", marginBottom: 10 }}>Create Story</h5>
             </div>
         </div>
     )

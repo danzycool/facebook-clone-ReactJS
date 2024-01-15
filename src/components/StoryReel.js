@@ -1,7 +1,7 @@
 import React from 'react';
 import "../css/StoryReel.css";
 import Story from './Story';
-import AddStory from './Story';
+import AddStory from './AddStory';
 import { useStateValue } from '../StateProvider';
 
 const StoryReel = () => {
